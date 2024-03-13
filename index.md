@@ -42,25 +42,21 @@ Business types were binned into four main categories:
 
 ## Results
 
-#### Category: Health and Welfare
 <p align="center">
   <img src="img/health_hex.png" alt="Health Hexbin" width="49%"/>
   <img src="img/health_tract.png" alt="Health Census Tract" width="49%"/>
 </p>
 
-#### Category: Construction and Manufacturing
 <p align="center">
   <img src="img/con_hex.png" alt="Construction Hexbin" width="49%"/>
   <img src="img/con_tract.png" alt="Construction Census Tract" width="49%"/>
 </p>
 
-#### Category: Professional and Financial
 <p align="center">
   <img src="img/prof_hex.png" alt="Professional Hexbin" width="49%"/>
   <img src="img/prof_tract.png" alt="Professional Census Tract" width="49%"/>
 </p>
 
-#### Category: Retail and Services
 <p align="center">
   <img src="img/retail_hex.png" alt="Professional Hexbin" width="49%"/>
   <img src="img/retail_tract.png" alt="Professional Census Tract" width="49%"/>
