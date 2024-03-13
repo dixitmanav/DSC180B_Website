@@ -44,7 +44,7 @@ Business types were binned into four main categories:
 
 ### Summary Statistics
 
-Identification of approximately 70 Activity Centers categorized by business activity, aiding in urban planning and development.
+![Summary Statistics Table](img/table.png)
 
 ### Discussion
 
