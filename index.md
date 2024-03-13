@@ -1,19 +1,9 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-  - [Background / Problem Statement](#background--problem-statement)
-  - [Data Collection](#data-collection)
 - [Methods](#methods)
-  - [Categorization](#categorization)
-  - [Hex-bin Approach](#hex-bin-approach)
-  - [Census Tract Approach](#census-tract-approach)
 - [Results](#results)
-  - [Summary Statistics](#summary-statistics)
-  - [Discussion](#discussion)
 - [Conclusion](#conclusion)
-  - [Limitations](#limitations)
-  - [Next Steps](#next-steps)
-- [Acknowledgments](#acknowledgments)
 - [References](#references)
 
 ## Introduction
