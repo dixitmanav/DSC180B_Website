@@ -66,7 +66,8 @@ Business types were binned into four main categories:
 
 ### Summary Statistics
 
-Summary Statistics for the largest cluster. 
+Summary Statistics for the largest cluster.
+
 ![Summary Statistics Table](img/table.png)
 
 ### Discussion
