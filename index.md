@@ -41,16 +41,16 @@ Business types were binned into four main categories:
 3. **Flatten Overlapping Groups:** Use the geometries to flatten potentially overlapping groups and repeat the process with distance clustering.
 
 ## Results
-<table style="width:100%; border-collapse: collapse;">
-  <tr>
-    <th style="text-align:left; width:49%;">Hexbin Approach</th>
-    <th style="text-align:right; width:49%;">Census Tract Approach</th>
-  </tr>
-</table>
-<p align="center">
-  <img src="img/health_hex.png" alt="Health Hexbin" width="49%"/>
-  <img src="img/health_tract.png" alt="Health Census Tract" width="49%"/>
-</p>
+<div style="text-align:center; width:100%;">
+  <div style="display:inline-block; width:49%; margin-right:1%; vertical-align:top;">
+    <p>Hexbin Approach</p>
+    <img src="img/health_hex.png" alt="Health Hexbin" width="100%"/>
+  </div>
+  <div style="display:inline-block; width:49%; margin-left:1%; vertical-align:top;">
+    <p>Census Tract Approach</p>
+    <img src="img/health_tract.png" alt="Health Census Tract" width="100%"/>
+  </div>
+</div>
 
 <p align="center">
   <img src="img/con_hex.png" alt="Construction Hexbin" width="49%"/>
