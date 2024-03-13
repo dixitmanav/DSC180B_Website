@@ -73,5 +73,3 @@ We extend our gratitude to Dr. Liang Tian and the SANDAG team for their mentorsh
 1. Employment centers in San Diego downtown.
 2. SANDAG open data portal.
 3. Tracy Hadden Loh DW Rowlands Adie Tomer Joseph Kane and Jennifer Vey. Mapping America’s activity centers: methodology appendix 2022.
-
-Github: [DSC180B Website](https://dixitmanav.github.io/DSC180B_Website/)
