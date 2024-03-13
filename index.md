@@ -62,17 +62,17 @@ Business types were binned into four main categories:
 
 #### Category: Retail and Services
 
-<p align="center">
-  <figure style="display: inline-block; width: 49%; margin-right: 2%; margin-left: 0;">
-    <figcaption style="text-align: center;">Hexbin Approach</figcaption>
+<div style="text-align:center;">
+  <div style="display:inline-block; width:49%; margin-right:1%;">
+    <figcaption>Hexbin Approach</figcaption>
     <img src="img/retail_hex.png" alt="Retail Hexbin" width="100%"/>
-  </figure>
-  
-  <figure style="display: inline-block; width: 49%; margin-right: 0; margin-left: 2%;">
-    <figcaption style="text-align: center;">Census Tract Approach</figcaption>
+  </div>
+  <div style="display:inline-block; width:49%; margin-left:1%;">
+    <figcaption>Census Tract Approach</figcaption>
     <img src="img/retail_tract.png" alt="Retail Census Tract" width="100%"/>
-  </figure>
-</p>
+  </div>
+</div>
+
 
 
 ### Summary Statistics
