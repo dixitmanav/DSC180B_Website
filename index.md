@@ -41,25 +41,39 @@ Business types were binned into four main categories:
 3. **Flatten Overlapping Groups:** Use the geometries to flatten potentially overlapping groups and repeat the process with distance clustering.
 
 ## Results
+
+#### Category: Health and Welfare
 <p align="center">
   <img src="img/health_hex.png" alt="Health Hexbin" width="49%"/>
   <img src="img/health_tract.png" alt="Health Census Tract" width="49%"/>
 </p>
 
+#### Category: Construction and Manufacturing
 <p align="center">
   <img src="img/con_hex.png" alt="Construction Hexbin" width="49%"/>
   <img src="img/con_tract.png" alt="Construction Census Tract" width="49%"/>
 </p>
 
+#### Category: Professional and Financial
 <p align="center">
   <img src="img/prof_hex.png" alt="Professional Hexbin" width="49%"/>
   <img src="img/prof_tract.png" alt="Professional Census Tract" width="49%"/>
 </p>
 
+#### Category: Retail and Services
+
 <p align="center">
-  <img src="img/retail_hex.png" alt="Retail Hexbin" width="49%"/>
-  <img src="img/retail_tract.png" alt="Retail Census Tract" width="49%"/>
+  <figure style="display: inline-block; width: 49%; margin-right: 2%; margin-left: 0;">
+    <figcaption style="text-align: center;">Hexbin Approach</figcaption>
+    <img src="img/retail_hex.png" alt="Retail Hexbin" width="100%"/>
+  </figure>
+  
+  <figure style="display: inline-block; width: 49%; margin-right: 0; margin-left: 2%;">
+    <figcaption style="text-align: center;">Census Tract Approach</figcaption>
+    <img src="img/retail_tract.png" alt="Retail Census Tract" width="100%"/>
+  </figure>
 </p>
+
 
 ### Summary Statistics
 
