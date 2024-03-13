@@ -44,6 +44,12 @@ Business types were binned into four main categories:
 
 ### Summary Statistics
 
+<p align="center">
+  <img src="img/health_hex.png" alt="Health Hexbin" width="49%"/>
+  <img src="img/health_tract.png" alt="Health Census Tract" width="49%"/>
+</p>
+
+
 ![Summary Statistics Table](img/table.png)
 
 ### Discussion
