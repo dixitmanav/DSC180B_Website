@@ -46,8 +46,7 @@ Business types were binned into four main categories:
 The outcome of our methodology is the identification of approximately 70 Activity Centers
 across San Diego County, categorized by the dominant type of business activity. These
 centers enable the aggregation of summary statistics and the generation of detailed data
-visualizations, assisting in the exploration of business-employee interactions within the re-
-gion. Our approach aligns with the objectives of the San Diego Association of Governments (SANDAG), 
+visualizations, assisting in the exploration of business-employee interactions within the region. Our approach aligns with the objectives of the San Diego Association of Governments (SANDAG), 
 providing a foundational tool for urban planning and the development
 of public-facing documents that illustrate the economic landscape of San Diego County.
 
