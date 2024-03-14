@@ -59,6 +59,7 @@ function loadGeoJSON(filepath) {
 
 currentDir = "hexbins";
 currentFile = "ret.json";
+loadGeoJSON(currentDir + "/" + currentFile);
 
 $("#hexbinBtn").click(function () {
   currentDir = "hexbins";

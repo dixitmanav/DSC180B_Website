@@ -24,6 +24,7 @@ The San Diego Association of Governments (SANDAG) utilizes data to shape future 
 ### Categorization
 
 Business types were binned into four main categories:
+
 1. Healthcare and Welfare
 2. Construction and Manufacturing
 3. Professional and Financial
@@ -46,7 +47,7 @@ Business types were binned into four main categories:
 The outcome of our methodology is the identification of approximately 70 Activity Centers
 across San Diego County, categorized by the dominant type of business activity. These
 centers enable the aggregation of summary statistics and the generation of detailed data
-visualizations, assisting in the exploration of business-employee interactions within the region. Our approach aligns with the objectives of the San Diego Association of Governments (SANDAG), 
+visualizations, assisting in the exploration of business-employee interactions within the region. Our approach aligns with the objectives of the San Diego Association of Governments (SANDAG),
 providing a foundational tool for urban planning and the development
 of public-facing documents that illustrate the economic landscape of San Diego County.
 
@@ -70,8 +71,6 @@ of public-facing documents that illustrate the economic landscape of San Diego C
   <img src="img/retail_tract.png" alt="Professional Census Tract" width="49%"/>
 </p>
 
-
-
 ### Summary Statistics
 
 Summary Statistics for the largest cluster.
@@ -91,7 +90,6 @@ The hex-bin method minimizes biases associated with pre-existing boundaries, ena
 #### Census Tract Approach
 
 In contrast, the census tract method aligns with pre-existing boundaries, incorporating natural and administrative demarcations such as freeways and other physical landmarks. This alignment aids in comparing clusters with detailed census tract and block-level employment data, enriching the clusters with socioeconomic contexts derived from employment datasets. Nonetheless, this method might produce overly large geometries in areas with sparse business data, potentially misrepresenting the actual distribution of economic activity.
-
 
 ## Conclusion
 
