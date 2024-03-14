@@ -10,7 +10,7 @@
 
 ### Background / Problem Statement
 
-The San Diego Association of Governments (SANDAG) utilizes data to shape future urban and transportation planning. Activity centers, defined as areas where different categories of businesses in San Diego tend to be located, offer a broader perspective for understanding the region's economic dynamics.
+The San Diego Association of Governments (SANDAG) utilizes data to shape future urban and transportation planning. The San Diego region stands as a burgeoning and dynamic hub for both living and working. In response to this growth, policy makers and regional planners at SANDAG have diligently utilized diverse data sources to create employment centers, crucial for informing future urban and transit planning endeavors. Traditionally, these employment centers have been defined as areas showcasing high concentrations of employment opportunities. However, there exists a need to enhance existing processes by incorporating additional data sources. Activity centers, defined as areas where different categories of businesses in San Diego tend to be located, offer a broader perspective for understanding the region's economic dynamics. These refined centers will not only be indicative of employment opportunities but also offer a holistic representation of the diverse activities characterizing their respective areas.
 
 ### Data Collection
 
