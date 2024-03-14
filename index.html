@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity Centers</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+      }
+      .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+      }
+      img {
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <article class="markdown-body">
+        <h1>Identifying Activity Centers in the San Diego Region</h1>
+
+        <div class="btn-group">
+          <button id="hexbinBtn" class="btn">Hexbin Model</button>
+          <button id="tractBtn" class="btn">Census Tract Model</button>
+        </div>
+
+        <div class="btn-group">
+          <button id="healthBtn" class="btn">Health Activity Center</button>
+          <button id="conBtn" class="btn">Construction Activity Center</button>
+          <button id="profBtn" class="btn">Professional Activity Center</button>
+          <button id="retBtn" class="btn">Retail Activity Center</button>
+        </div>
+        <div id="map" style="height: 400px"></div>
+        <h2>Table of Contents</h2>
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#methods">Methods</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+          <li><a href="#references">References</a></li>
+        </ul>
+
+        <h2 id="introduction">Introduction</h2>
+        <h3>Background / Problem Statement</h3>
+        <p>
+          The San Diego Association of Governments (SANDAG) utilizes data to
+          shape future urban and transportation planning. Activity centers,
+          defined as areas where different categories of businesses in San Diego
+          tend to be located, offer a broader perspective for understanding the
+          region's economic dynamics.
+        </p>
+        <h3>Data Collection</h3>
+        <ul>
+          <li>
+            <strong>SANGIS Data:</strong> Comprises coordinates and categories
+            of over 93,000 individual businesses within San Diego county.
+          </li>
+          <li>
+            <strong>U.S. Census Bureau Data:</strong> Provides insights into
+            employee commuting patterns and breaks down San Diego regions into
+            tracts.
+          </li>
+          <li>
+            <strong>SANDAG Open Data Portal:</strong> Offers a wide variety of
+            data assets and unique data products within the region.
+          </li>
+        </ul>
+
+        <h2 id="methods">Methods</h2>
+        <h3>Categorization</h3>
+        <p>Business types were binned into four main categories:</p>
+        <ol>
+          <li>Healthcare and Welfare</li>
+          <li>Construction and Manufacturing</li>
+          <li>Professional and Financial</li>
+          <li>Retail and Services</li>
+        </ol>
+        <h3>Hex-bin Approach</h3>
+        <ol>
+          <li>
+            <strong>Hexagonal Bins:</strong> Aggregate business-level data into
+            1/4 mile hex-bins to quantify the density of businesses, identifying
+            areas of high concentration.
+          </li>
+          <li>
+            <strong>Identify Activity Centers:</strong> Identify 70 hex-bins
+            with the highest business density.
+          </li>
+          <li>
+            <strong>Distance Clustering:</strong> Apply distance clustering to
+            assign remaining businesses to the hex-bins.
+          </li>
+        </ol>
+        <h3>Census Tract Approach</h3>
+        <ol>
+          <li>
+            <strong>Utilize Business Sites Data:</strong> Find n (e.g., 70)
+            number of clusters with k-means using business sites data.
+          </li>
+          <li>
+            <strong>Utilize New Clusters:</strong> Use the new clusters to merge
+            existing geometries of Census Tract data, forming new geometries.
+          </li>
+          <li>
+            <strong>Flatten Overlapping Groups:</strong> Use the geometries to
+            flatten potentially overlapping groups and repeat the process with
+            distance clustering.
+          </li>
+        </ol>
+
+        <h2 id="results">Results</h2>
+        <div style="display: flex; flex-wrap: wrap">
+          <img src="img/health_hex.png" alt="Health Hexbin" width="49%" /><img
+            src="img/health_tract.png"
+            alt="Health Census Tract"
+            width="49%"
+          />
+          <img
+            src="img/con_hex.png"
+            alt="Construction Hexbin"
+            width="49%"
+          /><img
+            src="img/con_tract.png"
+            alt="Construction Census Tract"
+            width="49%"
+          />
+          <img
+            src="img/prof_hex.png"
+            alt="Professional Hexbin"
+            width="49%"
+          /><img
+            src="img/prof_tract.png"
+            alt="Professional Census Tract"
+            width="49%"
+          />
+
+          <img
+            src="img/retail_hex.png"
+            alt="Professional Hexbin"
+            width="49%"
+          /><img
+            src="img/retail_tract.png"
+            alt="Professional Census Tract"
+            width="49%"
+          />
+        </div>
+        <h3>Summary Statistics</h3>
+        <p>Summary Statistics for the largest cluster.</p>
+        <p align="center">
+          <img src="img/table.png" alt="Summary Statistics Table" />
+        </p>
+        <h3>Discussion</h3>
+        <p>
+          Comparison between the two methods reveals similar hot spots in terms
+          of cluster grouping, with each method having its benefits and
+          drawbacks.
+        </p>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>
+          The study identified 70 clusters of different categories of activity
+          centers and derived summary statistics towards Census Tract,
+          highlighting the benefits and drawbacks of aggregating by hex-bin or
+          Census Tract.
+        </p>
+        <h3>Limitations</h3>
+        <ul>
+          <li>
+            Activity weight business sites did not account for the weight of
+            their employees, leading to an equal representation of all
+            businesses regardless of size.
+          </li>
+          <li>
+            Limitations on data: The dataset used by SANGIS was not frequently
+            updated, necessitating more data accumulation for future robustness.
+          </li>
+        </ul>
+        <h3>Next Steps</h3>
+        <ol>
+          <li>
+            Display weights onto certain business centers to accurately
+            represent their density.
+          </li>
+          <li>
+            Find more granular data sources to better represent the area with
+            summary statistics.
+          </li>
+        </ol>
+
+        <h2 id="acknowledgments">Acknowledgments</h2>
+        <p>
+          We extend our gratitude to Dr. Liang Tian and the SANDAG team for
+          their mentorship and opportunity.
+        </p>
+
+        <h2 id="references">References</h2>
+        <ol>
+          <li>Employment centers in San Diego downtown.</li>
+          <li>SANDAG open data portal.</li>
+          <li>
+            Tracy Hadden Loh DW Rowlands Adie Tomer Joseph Kane and Jennifer
+            Vey. Mapping America’s activity centers: methodology appendix 2022.
+          </li>
+        </ol>
+      </article>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
