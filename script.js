@@ -17,6 +17,7 @@ function getColor(d) {
     ? "#FC4E2A"
     : "#FD8D3C";
 }
+
 // Function to load GeoJSON from file
 function loadGeoJSON(filepath) {
   $.getJSON(filepath, function (jsonData) {
@@ -38,7 +39,7 @@ function loadGeoJSON(filepath) {
         map.removeLayer(layer);
       }
     });
-    // Add new GeoJSON layer to the map with style function
+    // Add new GeoJSON layer to the map with style function and tooltips
     L.geoJSON(jsonData, {
       style: function (feature) {
         // Calculate color based on normalized density value
@@ -52,6 +53,33 @@ function loadGeoJSON(filepath) {
           color: "white",
           fillOpacity: 0.7,
         };
+      },
+      onEachFeature: function (feature, layer) {
+        // Add tooltip to display the value of another variable
+        var tooltipContent =
+          "<b>TOTAL AREA STATISTICS<b><br>" +
+          "<b>Total # of Jobs:</b> " +
+          feature.properties["Total # of Jobs"] +
+          "<br>" +
+          "<b>Jobs for workers aged <=29:</b> " +
+          feature.properties["Jobs for workers aged <=29"] +
+          "<br>" +
+          "<b>Jobs for workers aged 30-54:</b> " +
+          feature.properties["Jobs for workers aged 30-54"] +
+          "<br>" +
+          "<b>Jobs for workers aged 55+:</b> " +
+          feature.properties["Jobs for workers aged 55+"] +
+          "<br>" +
+          "<b>Jobs with earnings >=$1250/month:</b> " +
+          feature.properties["Jobs with earnings >=$1250/month"] +
+          "<br>" +
+          "<b>Jobs with earnings $1251-$3333/month:</b> " +
+          feature.properties["Jobs with earnings $1251-$3333/month"] +
+          "<br>" +
+          "<b>Jobs with earnings $3333+/month:</b> " +
+          feature.properties["Jobs with earnings $1333+/month"] +
+          "<br>";
+        layer.bindTooltip(tooltipContent);
       },
     }).addTo(map);
   });
