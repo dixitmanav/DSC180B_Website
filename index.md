@@ -3,6 +3,7 @@
 - [Introduction](#introduction)
 - [Methods](#methods)
 - [Results](#results)
+- [Discussion](#discussion)
 - [Conclusion](#conclusion)
 - [References](#references)
 
@@ -70,7 +71,7 @@ Summary Statistics for the largest cluster.
 
 ![Summary Statistics Table](img/table.png)
 
-### Discussion
+## Discussion
 
 #### Comparative Analysis of Hexbin vs. Census Tract Methods
 
