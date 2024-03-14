@@ -9,6 +9,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css"
     />
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -145,16 +150,82 @@
           of public-facing documents that illustrate the economic landscape of
           San Diego County.
         </p>
-        <div class="btn-group">
-          <button id="hexbinBtn" class="btn">Hexbin Model</button>
-          <button id="tractBtn" class="btn">Census Tract Model</button>
-        </div>
+        <div class="container">
+          <div class="btn-group" role="group" aria-label="Model Selection">
+            <input
+              type="radio"
+              class="btn-check"
+              name="model"
+              id="hexbinBtn"
+              autocomplete="off"
+              checked
+            />
+            <label class="btn btn-outline-secondary" for="hexbinBtn"
+              >Hexbin Model</label
+            >
 
-        <div class="btn-group">
-          <button id="healthBtn" class="btn">Health Activity Center</button>
-          <button id="conBtn" class="btn">Construction Activity Center</button>
-          <button id="profBtn" class="btn">Professional Activity Center</button>
-          <button id="retBtn" class="btn">Retail Activity Center</button>
+            <input
+              type="radio"
+              class="btn-check"
+              name="model"
+              id="tractBtn"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-secondary" for="tractBtn"
+              >Census Tract Model</label
+            >
+          </div>
+
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Activity Center Selection"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="center"
+              id="healthBtn"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-secondary" for="healthBtn"
+              >Health Activity Center</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="center"
+              id="conBtn"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-secondary" for="conBtn"
+              >Construction Activity Center</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="center"
+              id="profBtn"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-secondary" for="profBtn"
+              >Professional Activity Center</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="center"
+              id="retBtn"
+              autocomplete="off"
+              checked
+            />
+            <label class="btn btn-outline-secondary" for="retBtn"
+              >Retail Activity Center</label
+            >
+          </div>
         </div>
         <div id="map" style="height: 400px"></div>
         <h3>Summary Statistics</h3>
