@@ -3,6 +3,7 @@
 - [Introduction](#introduction)
 - [Methods](#methods)
 - [Results](#results)
+- [Discussion](#discussion)
 - [Conclusion](#conclusion)
 - [References](#references)
 
@@ -10,7 +11,7 @@
 
 ### Background / Problem Statement
 
-The San Diego Association of Governments (SANDAG) utilizes data to shape future urban and transportation planning. Activity centers, defined as areas where different categories of businesses in San Diego tend to be located, offer a broader perspective for understanding the region's economic dynamics.
+The San Diego Association of Governments (SANDAG) utilizes data to shape future urban and transportation planning. The San Diego region stands as a burgeoning and dynamic hub for both living and working. In response to this growth, policy makers and regional planners at SANDAG have diligently utilized diverse data sources to create employment centers, crucial for informing future urban and transit planning endeavors. Traditionally, these employment centers have been defined as areas showcasing high concentrations of employment opportunities. However, there exists a need to enhance existing processes by incorporating additional data sources. Activity centers, defined as areas where different categories of businesses in San Diego tend to be located, offer a broader perspective for understanding the region's economic dynamics. These refined centers will not only be indicative of employment opportunities but also offer a holistic representation of the diverse activities characterizing their respective areas.
 
 ### Data Collection
 
@@ -42,6 +43,13 @@ Business types were binned into four main categories:
 
 ## Results
 
+The outcome of our methodology is the identification of approximately 70 Activity Centers
+across San Diego County, categorized by the dominant type of business activity. These
+centers enable the aggregation of summary statistics and the generation of detailed data
+visualizations, assisting in the exploration of business-employee interactions within the region. Our approach aligns with the objectives of the San Diego Association of Governments (SANDAG), 
+providing a foundational tool for urban planning and the development
+of public-facing documents that illustrate the economic landscape of San Diego County.
+
 <p align="center">
   <img src="img/health_hex.png" alt="Health Hexbin" width="49%"/>
   <img src="img/health_tract.png" alt="Health Census Tract" width="49%"/>
@@ -70,18 +78,30 @@ Summary Statistics for the largest cluster.
 
 ![Summary Statistics Table](img/table.png)
 
-### Discussion
+## Discussion
 
-Comparison between the two methods reveals similar hot spots in terms of cluster grouping, with each method having its benefits and drawbacks.
+#### Comparative Analysis of Hexbin vs. Census Tract Methods
+
+The hex-bin and census tract methodologies reveal similar concentrations of business clusters across San Diego, particularly within the health and welfare sector. Key areas such as La Jolla, Torrey Pines, and Sorrento Valley stand out as major hubs for the biotech industry and hospital locations. Although geo-spatial similarities exist between the two approaches, each comes with its own set of disadvantages and limitations.
+
+#### Hexbin Approach
+
+The hex-bin method minimizes biases associated with pre-existing boundaries, enabling a more nuanced understanding of spatial patterns. By organizing data into uniform hexagonal bins, it allows for the natural emergence of clusters based on data alone, without the constraint of traditional boundaries. This approach facilitates the discovery of clustering patterns unencumbered by external borders. However, its disregard for conventional boundaries can sometimes obscure analyses and make comparisons between different hex-bins challenging.
+
+#### Census Tract Approach
+
+In contrast, the census tract method aligns with pre-existing boundaries, incorporating natural and administrative demarcations such as freeways and other physical landmarks. This alignment aids in comparing clusters with detailed census tract and block-level employment data, enriching the clusters with socioeconomic contexts derived from employment datasets. Nonetheless, this method might produce overly large geometries in areas with sparse business data, potentially misrepresenting the actual distribution of economic activity.
+
 
 ## Conclusion
 
-The study identified 70 clusters of different categories of activity centers and derived summary statistics towards Census Tract, highlighting the benefits and drawbacks of aggregating by hex-bin or Census Tract.
+While both approaches offer valuable insights for the report's purposes, they prioritize different aspects of data representation. Hex-bins focus on an unbiased representation based on data-driven spatial patterns, whereas the census tract approach provides a contextually rich alignment with administrative boundaries, enhancing data comparability and socio-economic interpretation.
 
 ### Limitations
 
-- Activity weight business sites did not account for the weight of their employees, leading to an equal representation of all businesses regardless of size.
-- Limitations on data: The dataset used by SANGIS was not frequently updated, necessitating more data accumulation for future robustness.
+The methodology has limitations, notably in not adjusting for businesses' varying impacts based on size or significance. It treats all businesses equally, regardless of employee count or economic output, potentially missing key insights into economic activity distribution. Incorporating weighting schemes that reflect business size could provide a more accurate business activity representation.
+
+Additionally, the model's reliance on infrequently updated data, such as from the San Diego Geographic Information Source (SANDGIS), limits its currentness. A more dynamic and regularly updated data source, coupled with systematic data validation, could enhance the model's accuracy and relevance, ensuring a robust analytical framework.
 
 ### Next Steps
 
